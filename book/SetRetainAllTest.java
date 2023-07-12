@@ -1,6 +1,6 @@
 import java.util.HashSet;
 
-public class Test {
+public class SetRetainAllTest {
 	public static void main(String[] args) {
 		
 		HashSet<String> s1 = new HashSet<>();

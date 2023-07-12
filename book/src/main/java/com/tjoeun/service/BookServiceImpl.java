@@ -34,5 +34,17 @@ public class BookServiceImpl implements BookService {
 		Set<Book> booksByfilter = bookRepository.getBookListByFilter(filter);
 		return booksByfilter;
 	}
+	
+	@Override
+	public Book getBookById(String bookId) {
+		Book bookById = bookRepository.getBookById(bookId);		
+		return bookById;
+	}
+	
+	// 새 도서 등록하기
+	@Override
+	public void regNewBook(Book newBook) {
+		bookRepository.regNewBook(newBook);		
+	}
 
 }

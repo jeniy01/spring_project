@@ -25,6 +25,15 @@
 	<a href="/books/filter/bookFilter;publisher=한길사;category=인문교양" >출판사 및 도서분야로 검색하기 1</a><br>
 	<a href="/books/filter/bookFilter;publisher=한빛아카데미;category=IT서적" >출판사 및 도서분야로 검색하기 2</a><br>
 	<a href="/books/filter/bookFilter;publisher=이지스퍼블리싱;category=IT서적" >출판사 및 도서분야로 검색하기 3</a><br>
+	
+	<!-- 이지스퍼블리싱 출판사에 도서분야가 IT서적, 인문교양 두 개가 있다면 아래와 같이 작서하면 됨 --> 
+	<a href="/books/filter/bookFilter;publisher=이지스퍼블리싱;category=IT서적,인문교양" >출판사 및 도서분야로 검색하기 4</a><br>
+	<a href="/test/t8?id=ISBN-1234">도서 정보 보기 9</a><br><br>
+	
+	<a href="/test/regForm">회원가입하기</a><br>
+	<a href="/books/regBook">도서등록하기</a><br><br>
+	
+	<a href="/test/t9">@ModelAttribute 메소드 수준에서 적용하기</a>
 	</body>
 </html>
 

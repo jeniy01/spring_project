@@ -19,8 +19,16 @@ public class BookRepositoryImpl implements BookRepository {
 		Book book1 = new Book("ISBN-13", "난생처음 자바", 29000);
 		Book book2 = new Book("ISBN-14", "로마인이야기", 10000);
 		Book book3 = new Book("ISBN-15", "실무 엑셀", 21000);
+		Book book4 = new Book("ISBN-16", "한국인이야기", 20000);
 		
-		book1.setAuthor("우재남");
+		book4.setAuthor("더조은");
+	  book4.setDescription("이 책은 초보자에게 어려운 자바 개념을 다양한 삽화와 도식을 통해 시각적으로 설명하여 비전공자도 쉽게 이해할 수 있도록 구성하였습니다.");
+	  book4.setPublisher("이지스퍼블리싱");
+	  book4.setCategory("인문교양");
+	  book4.setUnitsInStock(90);
+	  book4.setReleaseDate("2022/05/05");
+	  
+	  book1.setAuthor("우재남");
 	  book1.setDescription("이 책은 초보자에게 어려운 자바 개념을 다양한 삽화와 도식을 통해 시각적으로 설명하여 비전공자도 쉽게 이해할 수 있도록 구성하였습니다.");
 	  book1.setPublisher("한빛아카데미");
 	  book1.setCategory("IT서적");
@@ -44,6 +52,7 @@ public class BookRepositoryImpl implements BookRepository {
 	  listOfBooks.add(book1);
 	  listOfBooks.add(book2);
 	  listOfBooks.add(book3);
+	  listOfBooks.add(book4);
 	  
 	}
 
@@ -102,6 +111,31 @@ public class BookRepositoryImpl implements BookRepository {
 		
 		booksByCategory.retainAll(booksByPublisher);		
 		return booksByCategory;
+	}
+	
+	@Override
+	public Book getBookById(String bookId) {
+		Book book = null;
+		
+		for(int i = 0; i < listOfBooks.size(); i++) {
+			Book tmpBook = listOfBooks.get(i);
+			if(tmpBook != null && tmpBook.getBookId() != null 
+				 && tmpBook.getBookId().equals(bookId)) {
+				book = tmpBook;
+				break;
+			}
+		}
+		// 전달한 id 에 해당하는 도서가 없는 경우
+		if(book == null) {
+			throw new IllegalArgumentException("도서 ID 가 " + bookId + "인 도서를 찾을 수 없습니다");
+		}	
+		return book;
+	}
+	
+	// 새 도서 등록하기
+	@Override
+	public void regNewBook(Book newBook) {
+		listOfBooks.add(newBook);		
 	}
 
 }
