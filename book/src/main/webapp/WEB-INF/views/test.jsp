@@ -6,10 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Document</title>
-  <link href="/resources/css/bootstrap.min.css" rel="stylesheet" />
-  
 </head>
 <body>
-  <h3>bookId : ${bookId}</h3>
+
+
 </body>
 </html>

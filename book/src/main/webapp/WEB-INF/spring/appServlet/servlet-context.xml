@@ -23,6 +23,8 @@
 	
 	<context:component-scan base-package="com.tjoeun.*" />
 	
+	<!-- @MatrixVariable 등록 -->
+	<annotation-driven enable-matrix-variables="true"/>
 	
 	
 </beans:beans>

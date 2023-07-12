@@ -1,6 +1,8 @@
 package com.tjoeun.service;
 
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,7 +17,7 @@ public class BookServiceImpl implements BookService {
 	private BookRepository bookRepository;
 
 	@Override
-	public List<Book> getAllBookList() {
+	public List<Book> getAllBookList() {		
 		List<Book> bookList = bookRepository.getAllBookList();
 		System.out.println(bookList.size());
 		return bookList;
@@ -26,4 +28,11 @@ public class BookServiceImpl implements BookService {
 		List<Book> booksByCategory = bookRepository.getBookListByCategory(category);
 		return booksByCategory;
 	}
+	
+	@Override
+	public Set<Book> getBookListByFilter(Map<String, List<String>> filter) {		
+		Set<Book> booksByfilter = bookRepository.getBookListByFilter(filter);
+		return booksByfilter;
+	}
+
 }

@@ -10,6 +10,7 @@
   
 </head>
 <body>
-  <h3>bookId : ${bookId}</h3>
+  <h3>도서정보 : ${data }</h3>
+
 </body>
 </html>

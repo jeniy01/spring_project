@@ -9,8 +9,9 @@ public class WelcomeController {
 	
 	@GetMapping("/home")
 	public String welcome(Model model) {
-		model.addAttribute("greeting", "안녕하세요. 어서오세요 !");
-		model.addAttribute("strapline", "안녕하세요. 온라인 쇼핑몰입니다 !");
+		model.addAttribute("greeting", "안녕하세요. 어서오세요 !!!");
+		model.addAttribute("strapline", "안녕하세요. 온라인 쇼핑몰입니다 !!!");
 		return "welcome";
 	}
+
 }
